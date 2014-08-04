@@ -30,6 +30,11 @@ TARGET_BOOTLOADER_BOARD_NAME := MSM8226
 TARGET_CPU_VARIANT := krait
 TARGET_USE_KINGFISHER_OPTIMIZATION := true
 
+# Optimizations
+ARCH_ARM_HAVE_NEON := true
+TARGET_GLOBAL_CFLAGS += -mcpu=cortex-a7 -mtune=cortex-a7 -mfpu=neon -mfloat-abi=softfp -flto
+TARGET_GLOBAL_CPPFLAGS += -mcpu=cortex-a7 -mtune=cortex-a7 -mfpu=neon -mfloat-abi=softfp -flto
+
 -include device/motorola/qcom-common/BoardConfigCommon.mk
 
 LOCAL_PATH := device/motorola/msm8226-common

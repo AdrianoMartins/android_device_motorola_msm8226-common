@@ -32,8 +32,8 @@ TARGET_USE_KINGFISHER_OPTIMIZATION := true
 
 # Optimizations
 ARCH_ARM_HAVE_NEON := true
-TARGET_GLOBAL_CFLAGS += -mcpu=cortex-a15 -mtune=cortex-a15 -mfpu=neon -mfloat-abi=softfp -flto
-TARGET_GLOBAL_CPPFLAGS += -mcpu=cortex-a15 -mtune=cortex-a15 -mfpu=neon -mfloat-abi=softfp -flto
+TARGET_GLOBAL_CFLAGS += -mcpu=cortex-a15 -mtune=cortex-a15 -mfpu=neon-vfpv4 -mfloat-abi=softfp -flto -fuse-linker-plugin
+TARGET_GLOBAL_CPPFLAGS += -mcpu=cortex-a15 -mtune=cortex-a15 -mfpu=neon-vfpv4 -mfloat-abi=softfp -flto -fuse-linker-plugin
 
 -include device/motorola/qcom-common/BoardConfigCommon.mk
 
